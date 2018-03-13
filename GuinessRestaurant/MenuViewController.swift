@@ -13,15 +13,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
   
    var menu: [Food] = []
   
-  //  let cellTable = " CellTable"
-    
- //   func createArray() -> [Food] {
-        
-       // var menu: [Food] = []
-        
-    
-    //    return menu
- //   }
     @IBOutlet weak var tableView: UITableView!
     
    

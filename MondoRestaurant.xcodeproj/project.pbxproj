@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		108DB795205400E100839FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB794205400E100839FE7 /* AppDelegate.swift */; };
-		108DB797205400E100839FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB796205400E100839FE7 /* ViewController.swift */; };
+		108DB797205400E100839FE7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB796205400E100839FE7 /* FirstViewController.swift */; };
 		108DB799205400E100839FE7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB798205400E100839FE7 /* MenuViewController.swift */; };
 		108DB79C205400E100839FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108DB79A205400E100839FE7 /* Main.storyboard */; };
 		108DB79E205400E100839FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 108DB79D205400E100839FE7 /* Assets.xcassets */; };
 		108DB7A1205400E100839FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108DB79F205400E100839FE7 /* LaunchScreen.storyboard */; };
 		108DB7A920540C0E00839FE7 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7A820540C0E00839FE7 /* MenuCell.swift */; };
 		108DB7AB2054270000839FE7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AA2054270000839FE7 /* DataModel.swift */; };
+		108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AC2055594100839FE7 /* CustomTabBarController.swift */; };
+		108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AE205725E700839FE7 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		108DB791205400E100839FE7 /* MondoRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondoRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108DB794205400E100839FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		108DB796205400E100839FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		108DB796205400E100839FE7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		108DB798205400E100839FE7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		108DB79B205400E100839FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		108DB79D205400E100839FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		108DB7A2205400E100839FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108DB7A820540C0E00839FE7 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		108DB7AA2054270000839FE7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		108DB7AC2055594100839FE7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		108DB7AE205725E700839FE7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +65,15 @@
 			isa = PBXGroup;
 			children = (
 				108DB794205400E100839FE7 /* AppDelegate.swift */,
-				108DB796205400E100839FE7 /* ViewController.swift */,
-				108DB798205400E100839FE7 /* MenuViewController.swift */,
-				108DB7AA2054270000839FE7 /* DataModel.swift */,
-				108DB7A820540C0E00839FE7 /* MenuCell.swift */,
+				108DB796205400E100839FE7 /* FirstViewController.swift */,
+				108DB7AE205725E700839FE7 /* CategoryCell.swift */,
+				108DB7AC2055594100839FE7 /* CustomTabBarController.swift */,
 				108DB79A205400E100839FE7 /* Main.storyboard */,
 				108DB79D205400E100839FE7 /* Assets.xcassets */,
 				108DB79F205400E100839FE7 /* LaunchScreen.storyboard */,
+				108DB798205400E100839FE7 /* MenuViewController.swift */,
+				108DB7AA2054270000839FE7 /* DataModel.swift */,
+				108DB7A820540C0E00839FE7 /* MenuCell.swift */,
 				108DB7A2205400E100839FE7 /* Info.plist */,
 			);
 			path = GuinessRestaurant;
@@ -147,9 +153,11 @@
 			files = (
 				108DB7AB2054270000839FE7 /* DataModel.swift in Sources */,
 				108DB799205400E100839FE7 /* MenuViewController.swift in Sources */,
+				108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */,
+				108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */,
 				108DB795205400E100839FE7 /* AppDelegate.swift in Sources */,
 				108DB7A920540C0E00839FE7 /* MenuCell.swift in Sources */,
-				108DB797205400E100839FE7 /* ViewController.swift in Sources */,
+				108DB797205400E100839FE7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
