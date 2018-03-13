@@ -58,7 +58,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        return collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! DetailTableviewCell
-       // cell.backgroundColor = UIColor.black
+    
       
     }
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -109,7 +109,7 @@ class DetailTableviewCell: UICollectionViewCell {
     }()
     let pricelabelDetail: UILabel = {
         let labelD = UILabel()
-        labelD.text = "Eur 13.50"
+        labelD.text = "GBP 13.50"
         labelD.font = UIFont.systemFont(ofSize: 10)
         labelD.textColor = UIColor.darkGray
         return labelD
