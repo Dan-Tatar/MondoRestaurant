@@ -9,6 +9,16 @@
 import UIKit
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+   
+    var foodCategoty: FoodCategory? {
+        didSet {
+            if let name = foodCategoty?.name {
+            nameLabel.text = name.rawValue
+                nameLabel.font = UIFont.boldSystemFont(ofSize: 20)
+            }
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -54,12 +64,15 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": detailCollectionView, "nameLabel": nameLabel]))
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        if let count = foodCategoty?.food?.count {
+        return count
+        }
+        return 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       return collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! DetailTableviewCell
-    
-      
+      let cell =   collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! DetailTableviewCell
+      cell.foodCell = foodCategoty?.food?[indexPath.row]
+      return cell
     }
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
       return CGSize(width: 180, height:frame.height - 30)
@@ -71,6 +84,19 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
 
 class DetailTableviewCell: UICollectionViewCell {
     
+    var foodCell: Food? {
+    didSet {
+        if let title = foodCell?.name {
+            titlelabelDetail.text = title
+        }
+        if let image = foodCell?.imageFood {
+            imageViewDetail.image = image
+        }
+        if let price = foodCell?.price {
+            pricelabelDetail.text = "£ " + String(price)
+        }
+      }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -104,13 +130,13 @@ class DetailTableviewCell: UICollectionViewCell {
     let titlelabelDetail: UILabel = {
         let labelD = UILabel()
         labelD.text = "Salmon"
-        labelD.font = UIFont.systemFont(ofSize: 13)
+        labelD.font = UIFont.systemFont(ofSize: 16)
         return labelD
     }()
     let pricelabelDetail: UILabel = {
         let labelD = UILabel()
         labelD.text = "GBP 13.50"
-        labelD.font = UIFont.systemFont(ofSize: 10)
+        labelD.font = UIFont.systemFont(ofSize: 14)
         labelD.textColor = UIColor.darkGray
         return labelD
     }()

@@ -11,14 +11,24 @@ import UIKit
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
-   var menu: [Food] = []
+    var menu: [FoodCategory] = []
+  
   
     @IBOutlet weak var tableView: UITableView!
     
    
     override func viewDidLoad() {
-        detailMenu()
-        navigationItem.title = " Menu"
+        menu = FoodCategory.detailMenu()
+     //  navigationItem.title = " Menu"
+     //   navigationItem.title. = UIFont()
+          let navTitle = UILabel()
+           navTitle.text  =  "Menu"
+           navTitle.textAlignment = .center
+           navTitle.font = UIFont.boldSystemFont(ofSize: 26)
+     
+          navigationItem.titleView = navTitle
+      //  navigationController?.navigationBar.prefersLargeTitles = true
+      
       
         
         super.viewDidLoad()
@@ -30,33 +40,39 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return (menu[section].food?.count)!
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return menu.count
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        let menuSection = FoodCategory()
+        label.frame = CGRect(x: 14, y: 10, width: view.frame.width, height: 30)
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.text = menuSection.sections[section]
+        label.backgroundColor = UIColor.lightGray
+      //  view.addSubview(label)
+        return label
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let menu = FoodCategory()
+        return menu.name?.rawValue
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath) as? MenuCell
-        let cellMenu = menu[indexPath.row]
+        let cellMenu = menu[indexPath.section].food![indexPath.row]
+      //  let celldetailMenu = cellMenu.food
         cell?.nameFood.text = cellMenu.name
-        cell?.courseFood.text = cellMenu.course.rawValue
         cell?.priceFood.text = "£ " + String(cellMenu.price)
         cell?.imageFood.image = cellMenu.imageFood
         cell?.imageFood.layer.cornerRadius = 10
         cell?.imageFood.layer.masksToBounds = true
         return cell!
     }
-    func detailMenu() {
-        var steak  = Food(name: "Steak", course: Course.mainCourse, price: 15.50, imageFood: #imageLiteral(resourceName: "steak1"))
-        var salmon = Food(name: "Salmon", course: Course.mainCourse, price: 12.00, imageFood: #imageLiteral(resourceName: "salmon1"))
-        var cheesecake  = Food(name: "Cheesecake", course: Course.desert, price: 7.00, imageFood: #imageLiteral(resourceName: "cheesecake1"))
-        var icecream  = Food(name: "Icecream", course: Course.mainCourse, price: 7.00, imageFood: #imageLiteral(resourceName: "Icecream1"))
-        var wine  = Food(name: "Wine", course: Course.Drinks, price: 5.50, imageFood: #imageLiteral(resourceName: "wine1"))
-        var fresh  = Food(name: "Fresh", course: Course.Drinks, price: 5.00, imageFood: #imageLiteral(resourceName: "orange-fresh"))
-        
-        menu.append(steak)
-        menu.append(salmon)
-        menu.append(cheesecake)
-        menu.append(icecream)
-        menu.append(wine)
-        menu.append(fresh)
-    }
+
 }
 

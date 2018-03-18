@@ -11,10 +11,13 @@ import UIKit
 class FeaturedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
   var collectionView: UICollectionView!
-
+    
+     var menu: [FoodCategory] = []
+    
 override func viewDidLoad() {
   //    collectionView?.backgroundColor = UIColor.white
      //  collectionView.title
+    menu  = FoodCategory.detailMenu()
     
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
      layout.sectionInset = UIEdgeInsets(top: 50, left: 10, bottom: 10, right: 10)
@@ -30,12 +33,14 @@ override func viewDidLoad() {
 }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return menu.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CategoryCell
+      cell.foodCategoty = menu[indexPath.item]
        cell.backgroundColor = UIColor.clear
+    
         return cell
     }
     //Updating the cells for tye entire width
