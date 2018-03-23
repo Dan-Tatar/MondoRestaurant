@@ -51,5 +51,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Mondo Restaurant</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Mondo Restaurant</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Mondo Restaurant</string>
 </dict>
 </plist>

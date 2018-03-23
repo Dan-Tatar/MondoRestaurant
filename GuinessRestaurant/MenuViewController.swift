@@ -22,6 +22,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      //  navigationItem.title = " Menu"
      //   navigationItem.title. = UIFont()
           let navTitle = UILabel()
+          
            navTitle.text  =  "Menu"
            navTitle.textAlignment = .center
            navTitle.font = UIFont.boldSystemFont(ofSize: 26)
@@ -46,14 +47,19 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return menu.count
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+  
         let label = UILabel()
         let menuSection = FoodCategory()
-        label.frame = CGRect(x: 14, y: 10, width: view.frame.width, height: 30)
+        label.frame = CGRect(x: 15, y: 0, width: view.frame.width, height: 30)
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.text = menuSection.sections[section]
-        label.backgroundColor = UIColor.lightGray
-      //  view.addSubview(label)
-        return label
+        label.backgroundColor = UIColor.white
+       headerView.addSubview(label)
+       
+         return headerView
+        view.addSubview(label)
+        
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let menu = FoodCategory()

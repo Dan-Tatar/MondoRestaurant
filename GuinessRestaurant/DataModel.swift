@@ -27,7 +27,7 @@ class FoodCategory {
         var salmon = Food(name: "Salmon", price: 12.00, imageFood: #imageLiteral(resourceName: "salmon1"))
         var carbonara = Food(name: "Carbonara", price: 10.00, imageFood: #imageLiteral(resourceName: "carbonara"))
         var squid = Food(name: "Squid with tagliatelle", price: 16.00, imageFood: #imageLiteral(resourceName: "squid with tagliatelle"))
-        var tacos = Food(name: "Tacos", price: 11.50, imageFood: #imageLiteral(resourceName: "salmon1"))
+        var tacos = Food(name: "Tacos", price: 11.50, imageFood: #imageLiteral(resourceName: "tacos"))
         
         bestMain.append(salmon)
         bestMain.append(steak)

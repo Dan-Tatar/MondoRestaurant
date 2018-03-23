@@ -17,6 +17,7 @@
 		108DB7AB2054270000839FE7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AA2054270000839FE7 /* DataModel.swift */; };
 		108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AC2055594100839FE7 /* CustomTabBarController.swift */; };
 		108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AE205725E700839FE7 /* CategoryCell.swift */; };
+		108DB7B1205FB5FE00839FE7 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		108DB7AA2054270000839FE7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		108DB7AC2055594100839FE7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		108DB7AE205725E700839FE7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				108DB7AA2054270000839FE7 /* DataModel.swift */,
 				108DB7A820540C0E00839FE7 /* MenuCell.swift */,
 				108DB7A2205400E100839FE7 /* Info.plist */,
+				108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */,
 			);
 			path = GuinessRestaurant;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */,
 				108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */,
 				108DB795205400E100839FE7 /* AppDelegate.swift in Sources */,
+				108DB7B1205FB5FE00839FE7 /* ContactsViewController.swift in Sources */,
 				108DB7A920540C0E00839FE7 /* MenuCell.swift in Sources */,
 				108DB797205400E100839FE7 /* FirstViewController.swift in Sources */,
 			);
