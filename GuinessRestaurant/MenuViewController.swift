@@ -18,27 +18,25 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
    
     override func viewDidLoad() {
-        menu = FoodCategory.detailMenu()
-     //  navigationItem.title = " Menu"
-     //   navigationItem.title. = UIFont()
-          let navTitle = UILabel()
-          
-           navTitle.text  =  "Menu"
-           navTitle.textAlignment = .center
-           navTitle.font = UIFont.boldSystemFont(ofSize: 26)
-     
-          navigationItem.titleView = navTitle
-      //  navigationController?.navigationBar.prefersLargeTitles = true
-      
-      
+         super.viewDidLoad()
+         menu = FoodCategory.detailMenu()
         
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setTitle()
+
+    }
+    
+    func setTitle() {
+        let navTitle = UILabel()
+        navTitle.text  =  "Menu"
+        navTitle.textAlignment = .center
+        navTitle.font = UIFont.boldSystemFont(ofSize: 26)
+        
+        navigationItem.titleView = navTitle
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (menu[section].food?.count)!
@@ -53,7 +51,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let menuSection = FoodCategory()
         label.frame = CGRect(x: 15, y: 0, width: view.frame.width, height: 30)
         label.font = UIFont.boldSystemFont(ofSize: 24)
-        label.text = menuSection.sections[section]
+        label.text = menuSection.course[section]
         label.backgroundColor = UIColor.white
        headerView.addSubview(label)
        
@@ -71,10 +69,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath) as? MenuCell
         let cellMenu = menu[indexPath.section].food![indexPath.row]
-      //  let celldetailMenu = cellMenu.food
         cell?.nameFood.text = cellMenu.name
         cell?.priceFood.text = "£ " + String(cellMenu.price)
         cell?.imageFood.image = cellMenu.imageFood
+        cell?.courseFood.text = cellMenu.course
         cell?.imageFood.layer.cornerRadius = 10
         cell?.imageFood.layer.masksToBounds = true
         return cell!

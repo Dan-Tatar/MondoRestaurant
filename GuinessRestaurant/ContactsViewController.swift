@@ -26,11 +26,9 @@ class ContactsViewController: UIViewController, CLLocationManagerDelegate, MKMap
     override func viewDidLoad() {
         super.viewDidLoad()
      
-     //   let mondoCoordinates = CLLocationCoordinate2DMake(latitude, longitude)
         showMondoOnmap()
         zoomIn()
-      
-        }
+    }
     @IBAction func startRoute(_ sender: UIButton) {
         
         let mondoCoordinates = CLLocationCoordinate2DMake(latitude, longitude)
@@ -44,8 +42,8 @@ class ContactsViewController: UIViewController, CLLocationManagerDelegate, MKMap
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestLocation()
-        }
+            locationManager.startUpdatingLocation()
+    }
         let regionRadius: CLLocationDistance  = 1000
 
         let regionSpan = MKCoordinateRegionMakeWithDistance(mondoCoordinates, regionRadius, regionRadius)
@@ -56,7 +54,6 @@ class ContactsViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         mapItem.openInMaps(launchOptions: options)
     }
-    
     
     func showMondoOnmap() {
    

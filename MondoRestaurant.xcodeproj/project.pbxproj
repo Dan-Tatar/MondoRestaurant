@@ -15,9 +15,11 @@
 		108DB7A1205400E100839FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108DB79F205400E100839FE7 /* LaunchScreen.storyboard */; };
 		108DB7A920540C0E00839FE7 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7A820540C0E00839FE7 /* MenuCell.swift */; };
 		108DB7AB2054270000839FE7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AA2054270000839FE7 /* DataModel.swift */; };
-		108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AC2055594100839FE7 /* CustomTabBarController.swift */; };
 		108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7AE205725E700839FE7 /* CategoryCell.swift */; };
 		108DB7B1205FB5FE00839FE7 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */; };
+		10A16580206AC7A700D78726 /* SmallCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1657F206AC7A600D78726 /* SmallCategoryCell.swift */; };
+		10A16582206AC82E00D78726 /* HeaderAndBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A16581206AC82E00D78726 /* HeaderAndBannerCell.swift */; };
+		10A16584206BD5C800D78726 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A16583206BD5C800D78726 /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +33,11 @@
 		108DB7A2205400E100839FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108DB7A820540C0E00839FE7 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		108DB7AA2054270000839FE7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		108DB7AC2055594100839FE7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		108DB7AE205725E700839FE7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		10A1657F206AC7A600D78726 /* SmallCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCategoryCell.swift; sourceTree = "<group>"; };
+		10A16581206AC82E00D78726 /* HeaderAndBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAndBannerCell.swift; sourceTree = "<group>"; };
+		10A16583206BD5C800D78726 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +72,18 @@
 			children = (
 				108DB794205400E100839FE7 /* AppDelegate.swift */,
 				108DB796205400E100839FE7 /* FirstViewController.swift */,
+				10A16581206AC82E00D78726 /* HeaderAndBannerCell.swift */,
+				10A1657F206AC7A600D78726 /* SmallCategoryCell.swift */,
 				108DB7AE205725E700839FE7 /* CategoryCell.swift */,
-				108DB7AC2055594100839FE7 /* CustomTabBarController.swift */,
 				108DB79A205400E100839FE7 /* Main.storyboard */,
 				108DB79D205400E100839FE7 /* Assets.xcassets */,
 				108DB79F205400E100839FE7 /* LaunchScreen.storyboard */,
 				108DB798205400E100839FE7 /* MenuViewController.swift */,
 				108DB7AA2054270000839FE7 /* DataModel.swift */,
 				108DB7A820540C0E00839FE7 /* MenuCell.swift */,
-				108DB7A2205400E100839FE7 /* Info.plist */,
 				108DB7B0205FB5FE00839FE7 /* ContactsViewController.swift */,
+				10A16583206BD5C800D78726 /* DetailTableViewCell.swift */,
+				108DB7A2205400E100839FE7 /* Info.plist */,
 			);
 			path = GuinessRestaurant;
 			sourceTree = "<group>";
@@ -156,10 +162,12 @@
 			files = (
 				108DB7AB2054270000839FE7 /* DataModel.swift in Sources */,
 				108DB799205400E100839FE7 /* MenuViewController.swift in Sources */,
-				108DB7AD2055594100839FE7 /* CustomTabBarController.swift in Sources */,
+				10A16582206AC82E00D78726 /* HeaderAndBannerCell.swift in Sources */,
 				108DB7AF205725E700839FE7 /* CategoryCell.swift in Sources */,
+				10A16584206BD5C800D78726 /* DetailTableViewCell.swift in Sources */,
 				108DB795205400E100839FE7 /* AppDelegate.swift in Sources */,
 				108DB7B1205FB5FE00839FE7 /* ContactsViewController.swift in Sources */,
+				10A16580206AC7A700D78726 /* SmallCategoryCell.swift in Sources */,
 				108DB7A920540C0E00839FE7 /* MenuCell.swift in Sources */,
 				108DB797205400E100839FE7 /* FirstViewController.swift in Sources */,
 			);
@@ -299,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDKU92UK3E;
 				INFOPLIST_FILE = GuinessRestaurant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dany.GuinessRestaurant;
@@ -313,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDKU92UK3E;
 				INFOPLIST_FILE = GuinessRestaurant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dany.GuinessRestaurant;
