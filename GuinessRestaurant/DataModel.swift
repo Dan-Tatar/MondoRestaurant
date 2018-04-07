@@ -62,9 +62,14 @@ class FoodCategory {
         var cheesecake = Food(name: "Cheesecake", price: 7.00, imageFood: #imageLiteral(resourceName: "cheesecake1"), course: Course.Desert.rawValue)
         var icecream = Food(name: "Icecream", price: 7.00, imageFood: #imageLiteral(resourceName: "Icecream1"), course: Course.Desert.rawValue)
         var tiramisu = Food(name: "Tiramisu", price: 5.00, imageFood: #imageLiteral(resourceName: "tiramisu"), course: Course.Desert.rawValue)
+        var pancakes = Food(name: "Pancakes", price: 6.00, imageFood: #imageLiteral(resourceName: "pancakes"), course: Course.Desert.rawValue)
+        var cake = Food(name: "Cake", price: 5.50, imageFood: #imageLiteral(resourceName: "chocolateCake"), course: Course.Desert.rawValue)
+        
         bestDesert.append(cheesecake)
         bestDesert.append(icecream)
-         bestDesert.append(tiramisu)
+        bestDesert.append(tiramisu)
+        bestDesert.append(pancakes)
+        bestDesert.append(cake)
        desertCategory.food = bestDesert
         
         return [mainCategoty, desertCategory, drinksCategory]
