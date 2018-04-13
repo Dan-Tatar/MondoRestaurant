@@ -69,6 +69,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath) as? MenuCell
         let cellMenu = menu[indexPath.section].food![indexPath.row]
+        cell?.selectionStyle = .none
         cell?.nameFood.text = cellMenu.name
         cell?.priceFood.text = "£ " + String(cellMenu.price)
         cell?.imageFood.image = cellMenu.imageFood
